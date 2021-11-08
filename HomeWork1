@@ -1,0 +1,85 @@
+function findPrime(...numbers) {
+   let sayı = 0
+   for (let i = 0; i < numbers.length; i++) {
+      for (let j = 2; j < numbers[i]; j++) {
+          if ((numbers[i] % j)== 0) {
+               sayı++
+          }
+       }
+       if (sayı==0) {
+           console.log(numbers[i] + " Sayısı Asaldır.")       
+       }
+       else{
+           console.log(numbers[i] + " Sayısı Asal Değildir.")
+       }
+       sayı=0
+   }
+   
+}
+
+findPrime(7,12,43,32,17,345,29,123,31,549,5,936,17,387,19,14,13,85)
+
+ 
+function friendsNumber(number1, number2) {
+
+    let sayı1 = 0
+    let sayı2 =0
+    for (let j = 0; j < number1; j++) {
+        if ((number1 % j) == 0) {
+            sayı1 = j + sayı1
+        }    
+    }
+
+    for (let i = 0; i < number2; i++) {
+        if ((number2 % i) == 0) {
+            sayı2 = i + sayı2
+        }
+        
+    }
+
+    if (sayı1 == number2 && sayı2 == number1) {
+        console.log(number1 + " Sayısı ve " + number2 + " Sayısı Kardeş sayılardır.")        
+    }
+    else{
+        console.log(number1 + " Sayısı ve " + number2 + " Sayısı Kardeş sayı değillerdir.")
+    }
+    
+}
+
+friendsNumber(220,284)
+friendsNumber(244,102)
+friendsNumber(1184,1210)
+friendsNumber(134,862)
+friendsNumber(17296,18416)
+
+function perfectNumber(number3) {
+    console.log(number3 + " Sayısı bir Mükemmel sayıdır.")
+}
+    let sayac2 = 0
+    for (let i = 1; i < 1000; i++) {
+        for (let j = 1; j < i; j++) {
+            if ((i % j) == 0) {
+                sayac2 = j + sayac2
+            }
+        }
+        if (sayac2 == i) {
+            perfectNumber(i)
+        }
+        sayac2 = 0        
+    }
+
+function primeNumber(number) {
+    console.log(number)
+}
+    let sayac = 0
+    for (let i = 2; i < 1000; i++) {
+       for (let j = 2; j < i ; j++) {
+           if ((i % j)== 0) {
+                sayac++
+           }
+        }
+        if (sayac==0) {
+            primeNumber(i)       
+        }
+        sayac=0
+    }
